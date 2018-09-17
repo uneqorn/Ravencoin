@@ -1313,7 +1313,6 @@ bool CAssetsCache::AddReissueAsset(const CReissueAsset& reissue, const std::stri
 //! Changes Memory Only
 bool CAssetsCache::RemoveReissueAsset(const CReissueAsset& reissue, const std::string address, const COutPoint& out, const std::vector<std::pair<std::string, CBlockAssetUndo> >& vUndoIPFS)
 {
-    std::cout << "Removeing reissue Asset" << std::endl;
     auto pair = std::make_pair(reissue.strName, address);
 
     CNewAsset assetData;

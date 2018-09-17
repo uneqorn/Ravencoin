@@ -1615,11 +1615,7 @@ static DisconnectResult DisconnectBlock(const CBlock& block, const CBlockIndex* 
         error("DisconnectBlock(): block asset undo data inconsistent");
         return DISCONNECT_FAILED;
     }
-
-    for (auto i : vUndoData) {
-        std::cout << "Undo Data: " << i.first << " : " << i.second.fChangedUnits << " : " << i.second.fChangedIPFS << " : " << i.second.nUnits << " : " << i.second.strIPFS << std::endl;
-    }
-
+    
     std::vector<std::pair<CAddressIndexKey, CAmount> > addressIndex;
     std::vector<std::pair<CAddressUnspentKey, CAddressUnspentValue> > addressUnspentIndex;
     std::vector<std::pair<CSpentIndexKey, CSpentIndexValue> > spentIndex;
